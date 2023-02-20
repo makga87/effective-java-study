@@ -1,13 +1,16 @@
 package com.study.effectivejava.item1;
 
-import com.study.effectivejava.common.model.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.sql.DriverManager;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import com.study.effectivejava.common.model.Order;
+import com.study.effectivejava.common.model.OrderType;
+import com.study.effectivejava.common.model.Product;
+import com.study.effectivejava.common.model.Reserve;
+import com.study.effectivejava.common.model.ReserveStatus;
 
 class StaticFactoryMethodTest {
 
