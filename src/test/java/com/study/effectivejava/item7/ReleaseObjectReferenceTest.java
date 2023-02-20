@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 class ReleaseObjectReferenceTest {
 
 	@Test
-	void selfManageMemory(){
+	void selfManageMemory() {
 		Stack stack = new Stack();
 
 		/**
@@ -20,11 +20,12 @@ class ReleaseObjectReferenceTest {
 		 */
 		ByteBuffer buffer = ByteBuffer.allocate(1024);
 	}
+
 	@Test
 	void weakHashMap() throws InterruptedException {
 
-		String hashMapKey1 = "1";
-		String hashMapKey2 = "2";
+		String hashMapKey1 = new String("1");
+		String hashMapKey2 = new String("2");
 
 		HashMap<String, String> hashMap = new HashMap<>();
 		hashMap.put(hashMapKey1, "hashMap test1");
@@ -32,8 +33,8 @@ class ReleaseObjectReferenceTest {
 
 		hashMapKey1 = null;
 
-		String weakHashMapKey1 = "3";
-		String weakHashMapKey2 = "4";
+		String weakHashMapKey1 = new String("3");
+		String weakHashMapKey2 = new String("4");
 
 		WeakHashMap<String, String> weakHashMap = new WeakHashMap<>();
 		weakHashMap.put(weakHashMapKey1, "weakHashMap test1");
@@ -43,7 +44,6 @@ class ReleaseObjectReferenceTest {
 
 		System.out.println("Before gc");
 		System.gc();
-		Thread.sleep(1000);
 		System.out.println("After gc");
 
 		print(hashMap);
@@ -60,7 +60,7 @@ class ReleaseObjectReferenceTest {
 		   });
 	}
 
-	private void end(){
+	private void end() {
 	}
 
 }
