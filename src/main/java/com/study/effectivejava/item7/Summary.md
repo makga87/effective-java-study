@@ -19,5 +19,17 @@
 
 ## Question
 1. 자기 메모리를 직접 관리하는 클래스는 다른건 뭐가 더 있을까?
+   1. ChatGPT로 확인해봤으나, null로 메모리 초기화 하는건 잘 안나오고, 바이터 버퍼가 나왔다. 그런데, 실제로 힙메모리관련 파라메터나, clear등으로 메모리에서 할당 정보를 해제 하는데, null로 초기화 하는 내용과는 조금 달라 보인다.
 2. WeakHashMap은 다른 곳에서 쓰이는 곳이 더 있을까?
+   1. org.apache.commons.httpclient.MultiThreadedHttpConnectionManager의 커넥션 관리용
+   2. 자바 코어 api의 클래스로더
+   3. 캐시
+   4. aspectjweaver 코어에도 있다
+   5. 하이버네이트
+   6. 제법 자주 쓰이는 듯 보인다
+   7. ehcache에선 SoftReference를 사용하는데, 이 녀석은 메모리 부족하지 않으면, GC는 안하는 모양이다
 3. 자주쓰는 EhCache는 구현체에서 무엇을 썼을까? (이 녀석은 시간을 지정할 수 있는데...)
+   1. 위 내용에 언급했듯이, SoftReference를 사용한다. 
+      1. 보통 이 자료구조가 캐시에 많이 쓰인다고 함
+4. WeakHashMap과 HashMap 동작의 차이를 보고싶다
+   1. 코드로 구현해보았으나, 적절히 동작하지 않음
