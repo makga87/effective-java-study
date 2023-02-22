@@ -40,11 +40,12 @@ class ReleaseObjectReferenceTest {
 		weakHashMap.put(weakHashMapKey1, "weakHashMap test1");
 		weakHashMap.put(weakHashMapKey2, "weakHashMap test2");
 
-		weakHashMapKey1 = null;
+		//		weakHashMapKey1 = null;
 
 		System.out.println("Before gc");
 		System.gc();
 		System.out.println("After gc");
+
 
 		print(hashMap);
 		print(weakHashMap);
