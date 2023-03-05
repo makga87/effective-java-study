@@ -18,9 +18,14 @@ repositories {
     mavenCentral()
 }
 
+ext{
+    autovalueVersion = '1.10.1'
+}
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'com.google.auto.value:auto-value-annotations:$autovalueVersion'
+    implementation 'com.google.auto.value:auto-value:$autovalueVersion'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'

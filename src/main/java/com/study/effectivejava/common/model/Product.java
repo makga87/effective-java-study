@@ -1,6 +1,6 @@
 package com.study.effectivejava.common.model;
 
-public class Product {
+public final class Product implements Cloneable {
 
     private int price;
 
@@ -18,4 +18,14 @@ public class Product {
     public int getPrice() {
         return this.price;
     }
+
+    @Override
+    public Product clone() {
+        try{
+            return (Product) super.clone();
+        } catch (CloneNotSupportedException e){
+            throw  new AssertionError();
+        }
+    }
+
 }
