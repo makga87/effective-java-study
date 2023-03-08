@@ -3,7 +3,6 @@ package com.study.effectivejava.common.model;
 public class Member {
 
     public static class GeneralMember {
-
         public void order(){
             System.out.println("일반 회원 주문");
         }
@@ -20,4 +19,8 @@ public class Member {
             System.out.println("일반 회원 주문 불가");
         }
     }
+
+	public Member newMember() {
+		return new Member();
+	}
 }
