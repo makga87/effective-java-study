@@ -1,6 +1,6 @@
 package com.study.effectivejava.common.model;
 
-public class ChildMember extends Member.BlackMember {
+public class ChildClient extends Client.BlackClient {
 
 //    @Override
 //    public void order(){
