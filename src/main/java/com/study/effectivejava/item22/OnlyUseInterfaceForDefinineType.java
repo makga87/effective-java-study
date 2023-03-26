@@ -1,4 +1,4 @@
-package com.study.effectivejava.item21;
+package com.study.effectivejava.item22;
 
 public class OnlyUseInterfaceForDefinineType {
 }
