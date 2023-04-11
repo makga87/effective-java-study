@@ -1,9 +1,9 @@
 package com.study.effectivejava.item26;
 
-import org.junit.jupiter.api.Test;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.junit.jupiter.api.Test;
 
 class DontUseRawTypeTest {
 
@@ -34,6 +34,9 @@ class DontUseRawTypeTest {
     void unboundedWildcardTypeTest(){
         List<?> unboundedWildcardTypeList = new ArrayList<>();
         unboundedWildcardTypeList.add(null);
+        unboundedWildcardTypeList.add(null);
+
+		System.out.println(unboundedWildcardTypeList.size());
 //        unboundedWildcardTypeList.add("test");
     }
 }
