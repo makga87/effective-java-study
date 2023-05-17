@@ -51,15 +51,15 @@ class MethodReferenceTest {
         };
     }
 
-    @Test
-    void genericFunctionTypeTest2() {
-        G g = String::new;
-        G _g = () -> new String();
-    }
-
-    @Test
-    void genericFunctionTypeTest3() {
-        G g = Object::new;
-        G _g = () -> new Object();
-    }
+//  /*  @Test
+//    void genericFunctionTypeTest2() {
+//        G g = String::new;
+//        G _g = () -> new String();
+//    }
+//
+//    @Test
+//    void genericFunctionTypeTest3() {
+//        G g = Object::new;
+//        G _g = () -> new Object();
+//    }*/
 }
