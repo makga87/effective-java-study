@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Sample4 {
 
-    @ExceptionRepeatableTest(IndexOutOfBoundsException.class)
+//    @ExceptionRepeatableTest(IndexOutOfBoundsException.class)
     @ExceptionRepeatableTest(NullPointerException.class)
     public static void doublyBad() { // 성공해야한다
         List<String> list = new ArrayList<>();

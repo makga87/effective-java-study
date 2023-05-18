@@ -1,13 +1,12 @@
 package com.study.effectivejava.item43;
 
 
-import autovalue.shaded.com.google.common.base.Function;
-import org.junit.jupiter.api.Test;
-
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
+
+import org.junit.jupiter.api.Test;
 
 class MethodReferenceTest {
 
@@ -19,8 +18,8 @@ class MethodReferenceTest {
         Stream.of(instant1, instant2, instant3)
                 .map(Instant.now()::isAfter)
                 .forEach(instant -> {
-
                 });
+
 
     }
 
@@ -34,7 +33,6 @@ class MethodReferenceTest {
                 return list;
             }
         };
-
 
         G2 g2 = new G2() {
             @Override
