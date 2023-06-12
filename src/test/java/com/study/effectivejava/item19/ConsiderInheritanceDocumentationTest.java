@@ -16,6 +16,7 @@ class ConsiderInheritanceDocumentationTest {
 
         System.out.println("==== 자식객체를 생성해 부모객체로 받는 경우 ====");
         Super sup = new Sub();
+        sup.overrideMe();
 
     }
 }
